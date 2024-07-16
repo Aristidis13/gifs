@@ -1,3 +1,6 @@
+declare module 'react-hover-video-player';
+declare module 'path';
+
 type Tag = string;
 type TUrl = string;
 
@@ -32,5 +35,5 @@ interface IGif {
   actors: Actor[];
   studio: Studio;
   tags?: Tag[];
-  url: TUrl;
+  videoSrc: TUrl;
 }

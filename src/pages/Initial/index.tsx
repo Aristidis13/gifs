@@ -1,10 +1,18 @@
+import VideoPlayer from '../../common/components/VideoPlayer/VideoPlayer.tsx';
 /**
  *The main page for the gifs project
  * @param {{gifs:IGif[]}} props - The props for the Initial page
- * @returns {Element} - The rendered initial page
+ * @returns The rendered initial page
  */
 const Initial = ({ gifs = [] }: IInitialPage) => {
-  return <div>{JSON.stringify(gifs)}</div>;
+  return (
+    <div>
+      {gifs.map(({ id, videoSrc }) => (
+        // JSON.stringify({ id, videoSrc })
+        <VideoPlayer key={id} videoSrc={videoSrc} />
+      ))}
+    </div>
+  );
 };
 
 export default Initial;
