@@ -1,5 +1,4 @@
 declare module 'react-hover-video-player';
-declare module 'path';
 
 type Tag = string;
 type TUrl = string;

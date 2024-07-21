@@ -1,5 +1,5 @@
 import Initial from '../Initial';
-import InitialGifsMock from '../../constants/mocks/InitialGifsMock';
+import InitialGifsMock from 'constants/mocks/InitialGifsMock';
 
 const App = ({}) => {
   return (
