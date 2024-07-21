@@ -1,4 +1,4 @@
-import VideoPlayer from '../../common/components/VideoPlayer/VideoPlayer.tsx';
+import VideoPlayer from '../../components/VideoPlayer/VideoPlayer.tsx';
 /**
  *The main page for the gifs project
  * @param {{gifs:IGif[]}} props - The props for the Initial page

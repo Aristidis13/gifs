@@ -34,7 +34,7 @@ const mockGifs: IGif[] = [
     actors: [SAVANNAH_BOND, MARKUS_DUPREE],
     studio: JJ,
     tags: [tags.rough, tags.doggystyle, tags.neckGrab],
-    videoSrc: '@/src/constants/mocks/vids/sm.webm',
+    videoSrc: '/vids/sm.webm',
   },
   {
     id: 2,
@@ -42,7 +42,7 @@ const mockGifs: IGif[] = [
     actors: [KELSEY_KANE],
     studio: BANG,
     tags: [tags.rough, tags.doggystyle, tags.threesome, tags.interracial],
-    videoSrc: 'src/constants/mocks/vids/kelsey.webm',
+    videoSrc: 'vids/kelsey.webm',
   },
 ];
 
