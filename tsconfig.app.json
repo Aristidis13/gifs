@@ -27,7 +27,7 @@
       "/*": ["./*"],
       "src/*": ["./src/*"],
       "types/*": ["./src/@types/*"],
-      "assets/*": ["./src/assets/*"],
+      "common/*": ["./src/common/*"],
       "components/*": ["./src/components/*"],
       "constants/*": ["./src/constants/*"],
       "pages/*": ["./src/pages/*"],

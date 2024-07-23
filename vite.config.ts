@@ -12,7 +12,7 @@ export default defineConfig({
       '/': resolve(__dirname, ''),
       src: resolve(root, ''),
       types: resolve(root, 'types'),
-      assets: resolve(root, 'assets'),
+      common: resolve(root, 'common'),
       components: resolve(root, 'components'),
       constants: resolve(root, 'constants'),
       pages: resolve(root, 'pages'),
