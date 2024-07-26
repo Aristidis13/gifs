@@ -1,9 +1,9 @@
-import globalTheme from './options';
-import { ThemeProvider as DefaultStylesProvider } from '@mui/material/styles';
+import themeOptions from './options';
+import { ThemeProvider as DefaultThemeProvider } from '@mui/material/styles';
 import { ITheme } from './Theme';
 
 const ThemeProvider = ({ children }: ITheme) => {
-  return <DefaultStylesProvider theme={globalTheme}> {children}</DefaultStylesProvider>;
+  return <DefaultThemeProvider theme={themeOptions}>{children}</DefaultThemeProvider>;
 };
 
 export default ThemeProvider;

@@ -3,6 +3,7 @@
  * that contains every used prop
  */
 export interface IVideoPlayer {
+  key?: number;
   crossOrigin?: string;
   videoCaptions?: string | null;
   videoSrc: string;

@@ -1,4 +1,4 @@
-import VideoPlayer from 'src/components/VideoPlayer/VideoPlayer';
+import VideoPlayer from 'src/components/VideoPlayer';
 /**
  *The main page for the gifs project
  * @param {{gifs:IGif[]}} props - The props for the Initial page
@@ -8,7 +8,6 @@ const Initial = ({ gifs = [] }: IInitialPage) => {
   return (
     <div>
       {gifs.map(({ id, videoSrc }) => (
-        // JSON.stringify({ id, videoSrc })
         <VideoPlayer key={id} videoSrc={videoSrc} />
       ))}
     </div>
