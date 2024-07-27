@@ -21,7 +21,7 @@ type Actor = {
 /**
  * Interface that describes the props of the landing page
  */
-interface IInitialPage {
+interface IRandomGifsPage {
   gifs: IGif[];
 }
 
