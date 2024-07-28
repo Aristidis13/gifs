@@ -1,10 +1,10 @@
 import Container from '../Container';
 import VideoPlayer from '../VideoPlayer';
-import styles from './styles';
+import './styles.css';
 
 const GifPresenter = ({ videoSrc, id, title, thumbnail, videoStyles }: IGifPresenterProps) => {
   return (
-    <Container maxWidth={false} sx={styles.gifPresenter}>
+    <Container className="gifPresenter">
       <VideoPlayer videoSrc={videoSrc} videoStyles={videoStyles} />
     </Container>
   );

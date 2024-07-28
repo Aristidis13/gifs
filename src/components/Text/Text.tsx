@@ -1,5 +1,9 @@
+import { ReactNode } from 'react';
 import { Typography } from '@mui/material';
-import { IText } from './Text.d';
+
+interface IText {
+  text: string | ReactNode;
+}
 
 const Text = ({ text }: IText) => {
   return <Typography>{text}</Typography>;

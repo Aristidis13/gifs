@@ -23,6 +23,7 @@ type Actor = {
  */
 interface IRandomGifsPage {
   gifs: IGif[];
+  classes?: TStyles;
 }
 
 /**
@@ -43,4 +44,16 @@ interface IGif {
  */
 type TStylePair = {
   [key: string]: number | string;
+};
+
+/**
+ * TStyles object
+ * Object that contains multiple keys, each of them being an Object containing TStylePair
+ */
+type TStyles = {
+  [key: string]: TStylePair;
+};
+
+type TClasses = {
+  [key: string]: string;
 };

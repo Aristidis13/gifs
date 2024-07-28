@@ -1,14 +1,9 @@
 import ReactHoverVideoPlayer from 'react-hover-video-player';
-import Container from '../Container';
 
 const VideoPlayer = ({ videoStyles, ...props }: IVideoPlayer) => {
   const maxHeight = videoStyles?.maxHeight || '100%'; //specify max Height to match its wrapper solves the overflow case
-  console.log(videoStyles);
-  return (
-    <Container componentType="div">
-      <ReactHoverVideoPlayer style={videoStyles} videoStyle={{ maxHeight }} {...props} />
-    </Container>
-  );
+
+  return <ReactHoverVideoPlayer style={videoStyles} videoStyle={{ maxHeight }} {...props} />;
 };
 
 /**
