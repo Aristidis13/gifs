@@ -5,7 +5,6 @@ export interface IContainerStyles {
 export default {
   div: {
     minWidth: '300px',
-    maxWidth: '100vw',
-    maxHeight: '100vh',
+    maxWidth: '100%',
   },
 } as IContainerStyles;

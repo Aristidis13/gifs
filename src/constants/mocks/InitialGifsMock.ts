@@ -19,6 +19,16 @@ const CLEA_GAULTIER = {
   age: 28,
 };
 
+const LILY_LOVE = {
+  name: 'Lily Love',
+  age: 25,
+};
+
+const MARCUS_LONDON = {
+  name: 'Marcus London',
+  age: 51,
+};
+
 // STUDIOS
 const JJ = { name: 'Jules Jordan' };
 const BANG = { name: 'Bang' };
@@ -55,7 +65,7 @@ const mockGifs: IGif[] = [
     title: 'Clea kissing in the shower',
     actors: [CLEA_GAULTIER],
     studio: JJ,
-    tags: [tags.kissing],
+    tags: [tags.kissing, tags.interracial],
     videoSrc: '/vids/3/clea.webm',
   },
   {
@@ -63,8 +73,15 @@ const mockGifs: IGif[] = [
     title: 'Kelsey thereesome ir',
     actors: [KELSEY_KANE],
     studio: BANG,
-    tags: [tags.rough, tags.doggystyle, tags.threesome, tags.interracial],
-    videoSrc: 'vids/4/sm.webm',
+    tags: [tags.rough, tags.doggystyle, tags.interracial],
+    videoSrc: 'vids/4/k5.webm',
+  },
+  {
+    id: 5,
+    title: 'Lily Love kisses Marcus London',
+    actors: [LILY_LOVE, MARCUS_LONDON],
+    tags: [tags.rough, tags.kissing, tags.neckGrab],
+    videoSrc: 'vids/5/lily.webm',
   },
 ];
 

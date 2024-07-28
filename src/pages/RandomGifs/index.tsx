@@ -1,19 +1,25 @@
-import VideoPlayer from 'src/components/VideoPlayer';
 import Container from '/src/components/Container';
+import GifPresenter from 'components/GifPresenter';
+import styles from './styles';
+
 /**
  *The main page for the gifs project
- * @param {{gifs:IGif[]}} props - The props for the RandomGifs page
  * @returns The rendered RandomGifs page
  */
 const RandomGifs = ({ gifs = [] }: IRandomGifsPage) => {
   return (
-    <div>
-      {gifs.map(({ id, videoSrc }) => (
-        <Container sx={{ width: '100%', opacity: '0.5 !important' }}>
-          <VideoPlayer key={id} videoSrc={videoSrc} />
-        </Container>
+    <Container sx={styles.gifsContainer}>
+      {gifs.map(({ id, videoSrc, thumbnail, title }) => (
+        <GifPresenter
+          key={'gif-' + id}
+          id={id}
+          title={title}
+          videoSrc={videoSrc}
+          thumbnail={thumbnail}
+          videoStyles={{ maxHeight: '300px' }}
+        />
       ))}
-    </div>
+    </Container>
   );
 };
 

@@ -7,7 +7,7 @@ type TUrl = string;
  * The studio info type
  */
 type Studio = {
-  name: string;
+  name: string | null;
 };
 
 /**
@@ -32,7 +32,15 @@ interface IGif {
   id: number;
   title: string;
   actors: Actor[];
-  studio: Studio;
+  studio?: Studio;
   tags?: Tag[];
+  thumbnail?: string | null;
   videoSrc: TUrl;
 }
+
+/**
+ * Style attribute
+ */
+type TStylePair = {
+  [key: string]: number | string;
+};

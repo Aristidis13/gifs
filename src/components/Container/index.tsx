@@ -1,19 +1,21 @@
 import { ElementType, ReactNode } from 'react';
-import { Box, BoxProps, useTheme } from '@mui/material';
+import MuiContainer from '@mui/material/Container';
+import { ContainerProps, useTheme } from '@mui/material/';
 import styles, { IContainerStyles } from './styles';
 
-type TBox = {
+type IContainerProps = {
   children?: ReactNode;
   componentType?: unknown; // Can be string indicating a component aka "div", "a", "span" or React Element
-} & BoxProps;
+} & ContainerProps;
 
-const Container = ({ componentType = 'div', children, ...boxSpecificProps }: TBox) => {
+const Container = ({ componentType = 'div', children, ...boxSpecificProps }: IContainerProps) => {
   const theme = useTheme();
   const styleIndex = typeof componentType === 'string' ? componentType : 'div'; //default is div but can change in the future
-  console.log(boxSpecificProps);
 
   return (
-    <Box
+    <MuiContainer
+      maxWidth={false}
+      disableGutters
       sx={{
         background: theme.palette.primary.main,
         ...styles?.[styleIndex as keyof IContainerStyles],
@@ -22,7 +24,7 @@ const Container = ({ componentType = 'div', children, ...boxSpecificProps }: TBo
       component={componentType as ElementType}
     >
       {children}
-    </Box>
+    </MuiContainer>
   );
 };
 
