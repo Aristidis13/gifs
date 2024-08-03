@@ -50,7 +50,8 @@ const mockGifs: IGif[] = [
     actors: [SAVANNAH_BOND, MARKUS_DUPREE],
     studio: JJ,
     tags: [tags.rough, tags.doggystyle, tags.neckGrab],
-    videoSrc: '/vids/2/sm.webm',
+    videoSrc: '/vids/1/1.webm',
+    thumbnail: './vids/1/1.png',
   },
   {
     id: 2,
@@ -58,7 +59,8 @@ const mockGifs: IGif[] = [
     actors: [KELSEY_KANE],
     studio: BANG,
     tags: [tags.rough, tags.doggystyle, tags.threesome, tags.interracial],
-    videoSrc: 'vids/1/kelsey.webm',
+    videoSrc: 'vids/2/2.webm',
+    thumbnail: './vids/2/2.jpg',
   },
   {
     id: 3,
@@ -66,7 +68,8 @@ const mockGifs: IGif[] = [
     actors: [CLEA_GAULTIER],
     studio: JJ,
     tags: [tags.kissing, tags.interracial],
-    videoSrc: '/vids/3/clea.webm',
+    videoSrc: '/vids/3/3.webm',
+    thumbnail: './vids/3/3.png',
   },
   {
     id: 4,
@@ -74,7 +77,8 @@ const mockGifs: IGif[] = [
     actors: [KELSEY_KANE],
     studio: BANG,
     tags: [tags.rough, tags.doggystyle, tags.interracial],
-    videoSrc: 'vids/4/k5.webm',
+    videoSrc: 'vids/4/4.webm',
+    thumbnail: 'vids/4/4.png',
   },
   {
     id: 5,
@@ -82,6 +86,7 @@ const mockGifs: IGif[] = [
     actors: [LILY_LOVE, MARCUS_LONDON],
     tags: [tags.rough, tags.kissing, tags.neckGrab],
     videoSrc: 'vids/5/lily.webm',
+    thumbnail: 'vids/5/lily.png',
   },
 ];
 

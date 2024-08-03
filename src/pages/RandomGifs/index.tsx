@@ -15,7 +15,7 @@ const RandomGifs = ({ gifs = [] }: IRandomGifsPage) => {
           title={title}
           videoSrc={videoSrc}
           thumbnail={thumbnail}
-          videoStyles={{ maxHeight: '300px' }}
+          videoStyle={{ maxWidth: '320px', maxHeight: '180px', width: 'auto' }}
         />
       ))}
     </Container>

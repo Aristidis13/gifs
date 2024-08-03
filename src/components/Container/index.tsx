@@ -9,10 +9,8 @@ type IContainerProps = {
 };
 
 const Container = ({ componentType = 'div', children, className }: IContainerProps) => {
-  const styleClass = typeof componentType === 'string' ? componentType : 'div'; //default is div but can change in the future
-
   return (
-    <Box component={componentType as ElementType} className={`${styleClass} ${className}`}>
+    <Box component={componentType as ElementType} className={className}>
       {children}
     </Box>
   );

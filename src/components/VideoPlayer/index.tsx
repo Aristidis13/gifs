@@ -1,9 +1,15 @@
+import { ReactNode } from 'react';
 import ReactHoverVideoPlayer from 'react-hover-video-player';
 
-const VideoPlayer = ({ videoStyles, ...props }: IVideoPlayer) => {
-  const maxHeight = videoStyles?.maxHeight || '100%'; //specify max Height to match its wrapper solves the overflow case
-
-  return <ReactHoverVideoPlayer style={videoStyles} videoStyle={{ maxHeight }} {...props} />;
+const VideoPlayer = ({ videoStyle, pausedOverlay, ...props }: IVideoPlayer) => {
+  return (
+    <ReactHoverVideoPlayer
+      {...props}
+      videoStyle={videoStyle}
+      pausedOverlay={pausedOverlay}
+      // sizingMode="container"
+    />
+  );
 };
 
 /**
@@ -12,11 +18,11 @@ const VideoPlayer = ({ videoStyles, ...props }: IVideoPlayer) => {
  */
 export interface IVideoPlayer {
   key?: number;
-  videoStyles?: TStylePair;
+  videoStyle?: TStylePair;
   crossOrigin?: string;
   videoCaptions?: string | null;
   videoSrc: string;
-  pausedOverlay?: React.FC | null;
+  pausedOverlay?: ReactNode | null;
   loadingOverlay?: React.FC | null;
   overlayTransitionDuration?: number;
   loadingStateTimeout?: number;

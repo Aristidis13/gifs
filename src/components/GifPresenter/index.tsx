@@ -1,11 +1,25 @@
 import Container from '../Container';
 import VideoPlayer from '../VideoPlayer';
 import './styles.css';
+import Thumbnail from 'components/Thumbnail';
 
-const GifPresenter = ({ videoSrc, id, title, thumbnail, videoStyles }: IGifPresenterProps) => {
+const GifPresenter = ({
+  videoSrc,
+  id,
+  title,
+  thumbnail,
+  videoStyle,
+  caption,
+}: IGifPresenterProps) => {
   return (
     <Container className="gifPresenter">
-      <VideoPlayer videoSrc={videoSrc} videoStyles={videoStyles} />
+      <VideoPlayer
+        videoSrc={videoSrc}
+        videoStyle={{ ...videoStyle }}
+        pausedOverlay={
+          thumbnail ? <Thumbnail thumbnail={thumbnail} caption={caption || ''} /> : null
+        }
+      />
     </Container>
   );
 };
@@ -15,7 +29,8 @@ interface IGifPresenterProps {
   title: string;
   videoSrc: string;
   thumbnail?: string | null;
-  videoStyles?: TStylePair;
+  videoStyle?: TStylePair;
+  caption?: string;
 }
 
 export default GifPresenter;
