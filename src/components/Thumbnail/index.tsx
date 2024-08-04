@@ -2,8 +2,7 @@ import ImageNotSupportedOutlinedIcon from '@mui/icons-material/ImageNotSupported
 import Image from 'mui-image';
 
 const Thumbnail = ({ thumbnail, caption = '' }: IThumbnail) => {
-  console.log(thumbnail);
-  const classNames = 'withMaxWidth320 withMaxHeight180';
+  const classNames = 'withAutoHeight';
   return thumbnail ?
       <Image className={classNames} src={thumbnail} alt={caption} fit="contain" showLoading />
     : <ImageNotSupportedOutlinedIcon />;

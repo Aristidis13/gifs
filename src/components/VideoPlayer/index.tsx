@@ -5,9 +5,8 @@ const VideoPlayer = ({ videoStyle, pausedOverlay, ...props }: IVideoPlayer) => {
   return (
     <ReactHoverVideoPlayer
       {...props}
-      videoStyle={videoStyle}
+      videoStyle={{ ...videoStyle, aspectRatio: '11/6', objectFit: 'contain', maxHeight: '100%' }}
       pausedOverlay={pausedOverlay}
-      // sizingMode="container"
     />
   );
 };

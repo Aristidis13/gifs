@@ -1,7 +1,3 @@
-.withMaxWidth320 {
-  max-width: 320px;
-}
-
-.withMaxHeight180 {
-  max-height: 180px;
+.withAutoHeight {
+  height: auto;
 }
