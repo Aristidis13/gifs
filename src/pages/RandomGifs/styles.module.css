@@ -1,13 +1,16 @@
 .gifsContainer {
-  padding: 1.5rem 5%;
-  margin: 0;
+  margin: 1.5rem 5%;
   display: grid;
   grid-template-rows: 100% 100%;
   grid-template-columns: 25% 25% 25% 25%;
-  gap: 1%;
 }
 
 .oneLinedGrid {
   grid-template-columns: 100%;
   grid-auto-columns: 100%;
+}
+
+.twoLinedGrid {
+  grid-template-columns: 50% 50%;
+  grid-auto-columns: 50% 50%;
 }

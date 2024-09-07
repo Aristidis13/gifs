@@ -19,5 +19,5 @@ export default defineConfig({
       utils: resolve(root, 'utils'),
     },
   },
-  plugins: [tsconfigPaths(), react({ jsxImportSource: '@emotion/react' })],
+  plugins: [tsconfigPaths(), react()],
 });

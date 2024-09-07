@@ -1,10 +1,13 @@
 import ImageNotSupportedOutlinedIcon from '@mui/icons-material/ImageNotSupportedOutlined';
 import Image from 'mui-image';
+import styles from './styles.module.css';
 
 const Thumbnail = ({ thumbnail, caption = '' }: IThumbnail) => {
-  const classNames = 'withAutoHeight';
+  const imgCaption = caption || '';
+  const classNames = styles.withAutoHeight;
+
   return thumbnail ?
-      <Image className={classNames} src={thumbnail} alt={caption} fit="contain" showLoading />
+      <Image className={classNames} src={thumbnail} alt={imgCaption} fit="cover" showLoading />
     : <ImageNotSupportedOutlinedIcon />;
 };
 

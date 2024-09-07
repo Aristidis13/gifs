@@ -1,12 +1,24 @@
 import { ReactNode } from 'react';
 import ReactHoverVideoPlayer from 'react-hover-video-player';
 
-const VideoPlayer = ({ videoStyle, pausedOverlay, ...props }: IVideoPlayer) => {
+const VideoPlayer = ({
+  videoStyle,
+  pausedOverlay,
+  playbackStartDelay,
+  controls,
+  loop,
+  hoverTarget,
+  ...props
+}: IVideoPlayer) => {
   return (
     <ReactHoverVideoPlayer
-      {...props}
+      controls={controls ?? true}
       videoStyle={{ ...videoStyle, aspectRatio: '11/6', objectFit: 'contain', maxHeight: '100%' }}
       pausedOverlay={pausedOverlay}
+      playbackStartDelay={playbackStartDelay ?? 100}
+      loop={loop || true}
+      hoverTarget={hoverTarget || null}
+      {...props}
     />
   );
 };
@@ -16,16 +28,20 @@ const VideoPlayer = ({ videoStyle, pausedOverlay, ...props }: IVideoPlayer) => {
  * that contains every used prop
  */
 export interface IVideoPlayer {
-  key?: number;
-  videoStyle?: TStylePair;
+  controls?: boolean;
   crossOrigin?: string;
+  hoverOverlay?: React.FC | null;
+  hoverTarget?: Function;
+  key?: number;
+  loadingOverlay?: React.FC | null;
+  loadingStateTimeout?: number;
+  loop?: boolean;
+  overlayTransitionDuration?: number;
+  pausedOverlay?: ReactNode | null;
+  playbackStartDelay?: number;
+  videoStyle?: TStylePair;
   videoCaptions?: string | null;
   videoSrc: string;
-  pausedOverlay?: ReactNode | null;
-  loadingOverlay?: React.FC | null;
-  overlayTransitionDuration?: number;
-  loadingStateTimeout?: number;
-  hoverOverlay?: React.FC | null;
 }
 
 export default VideoPlayer;

@@ -1,7 +1,8 @@
-import Container from '../Container';
+import { createRef, useMemo, useRef } from 'react';
 import VideoPlayer from '../VideoPlayer';
-import './styles.css';
+import styles from './styles.module.css';
 import Thumbnail from 'components/Thumbnail';
+import { Diversity1 } from '@mui/icons-material';
 
 const GifPresenter = ({
   videoSrc,
@@ -11,16 +12,21 @@ const GifPresenter = ({
   videoStyle,
   caption,
 }: IGifPresenterProps) => {
+  const gifId = 'gif-' + id;
+
   return (
-    <Container className="gifPresenter">
+    <div className={styles.gifPresenter} id={gifId}>
       <VideoPlayer
         videoSrc={videoSrc}
         videoStyle={{ ...videoStyle }}
         pausedOverlay={
           thumbnail ? <Thumbnail thumbnail={thumbnail} caption={caption || ''} /> : null
         }
+        controls={false}
+        hoverTarget={() => document.getElementById(gifId) || null}
       />
-    </Container>
+      <div className={styles.titlePresenter}>{title}</div>
+    </div>
   );
 };
 
