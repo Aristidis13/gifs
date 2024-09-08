@@ -1,16 +1,19 @@
-import { Provider, useContext, createContext, ReactNode } from 'react';
+import { createContext, ReactNode } from 'react';
 
 const UIContext = createContext<IUIContext>({});
 // isOneColumn: Boolean,
 // isTwoColumns: Boolean,
 // isFourColumns: Boolean,
 
-const UIContextProvider = ({ children }: UIContextProvider) => {
+const UIContextProvider = ({ children }: IUIContextProvider) => {
   return <UIContext.Provider value={{}}>{children}</UIContext.Provider>;
 };
 
 interface IUIContext {}
 
-interface UIContextProvider {
+interface IUIContextProvider {
   children: ReactNode;
 }
+
+export { UIContext };
+export default UIContextProvider;

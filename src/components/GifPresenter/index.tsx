@@ -1,8 +1,6 @@
-import { createRef, useMemo, useRef } from 'react';
 import VideoPlayer from '../VideoPlayer';
 import styles from './styles.module.css';
 import Thumbnail from 'components/Thumbnail';
-import { Diversity1 } from '@mui/icons-material';
 
 const GifPresenter = ({
   videoSrc,

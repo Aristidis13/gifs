@@ -1,11 +1,13 @@
+import { ReactNode } from 'react';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import styles from './styles.module.css';
 import { Pagination, GifPresenter } from 'src/components';
+
 /**
  *The main page for the gifs project
  * @returns The rendered RandomGifs page
  */
-const RandomGifs = ({ gifs = [] }: IRandomGifsPage) => {
+const RandomGifs = ({ gifs = [] }: IRandomGifsPage): ReactNode => {
   const breakPoints = { oneLiner: 43.75, twoLiner: 62.5 };
   const isOneColumn = useMediaQuery(`(max-width: ${breakPoints.oneLiner}rem)`);
   const isMoreThan1Column = useMediaQuery(`(min-width: ${breakPoints.oneLiner}rem)`);

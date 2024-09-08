@@ -1,0 +1,70 @@
+const typography = {
+  fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+  htmlFontSize: 16,
+  fontSize: 16,
+  caption: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '0.86rem',
+    letterSpacing: '0.33rem',
+    lineHeight: 1.58,
+  },
+  h1: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '4rem',
+    letterSpacing: '0.4rem',
+    lineHeight: 1.58,
+  },
+  h2: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '3rem',
+    letterSpacing: '0.4rem',
+    lineHeight: 1.58,
+  },
+  h3: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '2rem',
+    letterSpacing: '0.3rem',
+    lineHeight: 1.58,
+  },
+  h4: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '1rem',
+    letterSpacing: '0.3rem',
+    lineHeight: 1.58,
+  },
+  h5: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '0.5rem',
+    letterSpacing: '0.2rem',
+    lineHeight: 1.58,
+  },
+  h6: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '0.25rem',
+    letterSpacing: '0.2rem',
+    lineHeight: 1.58,
+  },
+  button: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '1rem',
+    letterSpacing: '0.2rem',
+    lineHeight: 1.58,
+  },
+  overline: {
+    fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    fontWeight: 400,
+    fontSize: '1rem',
+    letterSpacing: '0.2rem',
+    lineHeight: 1.58,
+  },
+};
+
+export default typography;
