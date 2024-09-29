@@ -13,7 +13,7 @@ const routes = createBrowserRouter([
     errorElement: <Error />,
   },
   {
-    path: 'search/:term',
+    path: 'search',
     element: <Search />,
     errorElement: <Error />,
   },
